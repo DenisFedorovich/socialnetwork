@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "PlayRegular";
+    src: url("../src/fonts/Play-Regular.ttf") format("truetype");
+}
+
+//variables
+$font-stack: "PlayRegular", sans-serif;
+$font-size-stack: 20px;
+$color: #161616;
+$color-white: #fff;
+$color-accent: #139fe7;
+$color-captions: #373737;
+$color-button: #35627b;
+$color-bg: #e0ddd4;
+$color-hd: #f8f6f6;
+$color-hover:#f29427;

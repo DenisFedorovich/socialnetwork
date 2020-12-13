@@ -1,0 +1,67 @@
+.main {
+    grid-area: m;
+    background-color: $color-hd;
+
+}
+
+
+
+.post-block {
+    margin-left: 10px;
+
+    .button-block {
+        display: flex;
+        align-items: center;
+
+        .menu-btn {
+            color: $color-white;
+            font-size: 18px;
+            width: 80px;
+            height: 30px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            background-color: $color-button;
+            overflow: hidden;
+            transition: ease 0.3s;
+            margin-left: 20px;
+
+            &:hover {
+                background-color: #4582a3;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+}
+
+.post {
+    display: flex;
+    flex-direction: center;
+    margin: 10px 0;
+
+    p {
+        margin-left: 10px;;
+    }
+
+    .mini-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+
+    span {
+        margin-left: 10px;
+    }
+
+}
+
+
+
+    
+
+
+

@@ -1,0 +1,18 @@
+.footer {
+  grid-area: f;
+  justify-content: center;
+  background-color: #e0ddd4;
+}
+
+text {
+  display: block;
+}
+
+address {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-style: normal;
+  margin-top: 20px;
+}

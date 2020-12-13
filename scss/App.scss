@@ -1,0 +1,50 @@
+@import "normalize";
+@import "settings";
+@import "header";
+@import "nav";
+@import "main";
+@import "footer";
+
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+/*
+body {
+    font-family: $font-stack;
+    font-size: $font-size-stack;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1010px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5px;
+    margin: 0 auto;
+}*/
+
+
+
+
+
+
+

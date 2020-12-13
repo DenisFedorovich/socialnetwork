@@ -1,0 +1,28 @@
+.block {
+  margin-left: 10px;
+}
+
+.postform {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  color: #fff;
+  font-size: 18px;
+  width: 80px;
+  height: 30px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  background-color: #35627b;
+  overflow: hidden;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #4582a3;
+  cursor: pointer;
+}

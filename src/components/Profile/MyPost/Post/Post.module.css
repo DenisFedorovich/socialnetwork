@@ -1,0 +1,19 @@
+.post {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.post p {
+  margin-left: 10px;
+}
+
+.miniavatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.post span {
+  margin-left: 10px;
+}
