@@ -1,15 +1,16 @@
 import React from 'react';
-import Avatar from './Avatar/Avatar';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 import MyPostsContainer from './MyPost/MyPostsContainer';
 import classes from './Profile.module.css';
+
 
 
 const Profile = (props) => {
 
   return (
-    <div className={classes.main}>
-      <Avatar />
-      <MyPostsContainer/>
+    <div>
+      <ProfileInfo profile={props.profile} />
+      <MyPostsContainer />
     </div>
   ); // атрибут совпадет название с массивом на который ссылаемся
 }

@@ -122,6 +122,7 @@
     background-color: #35627b;
     overflow: hidden;
     transition: ease 0.3s;
+    cursor: pointer;
 }
 
 .btn:hover {

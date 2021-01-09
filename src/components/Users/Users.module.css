@@ -1,0 +1,77 @@
+.userPhoto {
+  width: 100px;
+  height: 120px;
+  border-radius: 5px;
+}
+
+.btn {
+  color: #fff;
+  font-size: 18px;
+  width: 80px;
+  height: 30px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  background-color: #35627b;
+  overflow: hidden;
+  transition: ease 0.3s;
+}
+
+.btn:hover {
+  background-color: #4582a3;
+  cursor: pointer;
+}
+
+.btn:disabled,
+.btn[disabled]{
+  border: none;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.userBlock {
+  display: flex;
+  padding: 5px;
+}
+
+.btnPosition {
+  display: flex;
+  justify-content: center;
+}
+
+.nameAndStatus {
+  display: flex;
+}
+
+.name {
+  padding-left: 5px;
+}
+
+.status {
+  padding-left: 25px;
+}
+
+.location {
+  display: flex;
+  padding: 40px 5px;
+}
+
+.country {
+  padding-left: 5px;
+} 
+
+.selectedPage {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.selectedPage:hover {
+  cursor: pointer;
+  
+}
+
+.numberPage {
+  cursor: pointer;
+}
+
