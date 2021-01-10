@@ -1,6 +1,7 @@
 import React from 'react';
 import Preloader from '../../Preloader/Preloader';
-import classes from './Avatar.module.css';
+import classes from './ProfileInfo.module.css';
+import ProfileStatus from './ProfieStatus/ProfileStatus';
 
 
 const ProfileInfo = (props) => {
@@ -11,11 +12,9 @@ const ProfileInfo = (props) => {
   return (
     <div className={classes.block}>
       <div>
-        <img className={classes.avatarImg} src='../../img/avatar2700.jpg' alt='avatar'></img>
-      </div>
-      <div>
         <img className={classes.peopleAva} src={props.profile.photos.large} />
       </div>
+      <ProfileStatus status={'привет, ребза'} />
       <div>
         <div className={classes.profileName}> {props.profile.fullName} </div>
       </div>
