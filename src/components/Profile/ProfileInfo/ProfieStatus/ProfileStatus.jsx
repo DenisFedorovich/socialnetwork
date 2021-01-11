@@ -5,15 +5,8 @@ class ProfileStatus extends React.Component {
 
   state = {
     editMode: false,
-    title: 'yo'
-  };//local state
-
-  /*activateEditMode = () => {
-    this.setState({
-      editMode: true
-    });
-    //this.forceUpdate();method for update
-  };//method without bind*/
+    status: this.props.status,
+  }//local state
 
   activateEditMode() {
     this.setState({
@@ -21,13 +14,26 @@ class ProfileStatus extends React.Component {
     });
   }//method with bind*/
 
-  deactivateEditMode() {
+  deactivateEditMode = () => {
     this.setState({
       editMode: false
     });
+    this.props.updateStatus(this.state.status);
   }
 
-  //setState - local state method
+  onStatusChange = (e) => {
+    this.setState({
+      status: e.currentTarget.value
+    });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.status !== this.props.status) {
+      this.setState({
+        status: this.props.status,
+      })
+    }
+  } //статус синхронизорован с локальным стейтом
 
   render() {
     return (
@@ -39,7 +45,11 @@ class ProfileStatus extends React.Component {
         }
         {this.state.editMode &&
           <div>
-            <input placeholder="Введите статус" autoFocus={true} onBlur={this.deactivateEditMode.bind(this)} value={this.props.status} />
+            <input placeholder="Введите статус"
+              autoFocus={true}
+              onChange={this.onStatusChange}
+              onBlur={this.deactivateEditMode}
+              value={this.state.status} />
           </div>
         }
       </div>
@@ -49,6 +59,14 @@ class ProfileStatus extends React.Component {
 
 export default ProfileStatus;
 
+/*activateEditMode = () => {
+    this.setState({
+      editMode: true
+    });
+    //this.forceUpdate();method for update
+  };//method without bind*/
+
+//setState - local state method
 
 /*{!this.state.editMode &&
   < div >
