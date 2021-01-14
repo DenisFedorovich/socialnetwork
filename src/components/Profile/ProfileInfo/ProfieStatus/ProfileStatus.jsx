@@ -45,7 +45,9 @@ class ProfileStatus extends React.Component {
         }
         {this.state.editMode &&
           <div>
-            <input placeholder="Введите статус"
+            <input 
+              className={classes.inp}
+              placeholder="Введите статус"
               autoFocus={true}
               onChange={this.onStatusChange}
               onBlur={this.deactivateEditMode}
