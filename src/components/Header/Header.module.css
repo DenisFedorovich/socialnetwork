@@ -19,4 +19,24 @@ h1 {
   margin-left: 100px;
 }
 
+.btn {
+  color: #fff;
+  font-size: 14px;
+  width: 60px;
+  height: 20px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  background-color: #35627b;
+  overflow: hidden;
+  transition: ease 0.3s;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.btn:hover {
+  background-color: #4582a3;
+  cursor: pointer;
+}
 

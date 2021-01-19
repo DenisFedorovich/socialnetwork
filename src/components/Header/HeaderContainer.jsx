@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import classes from './Header.module.css';
 import Preloader from './../Preloader/Preloader';
 import Header from './Header';
-import { getAuthUserData } from './../../redux/auth-reducer'
+import { getAuthUserData, logout } from './../../redux/auth-reducer'
 import { connect } from 'react-redux';
 import { authAPI } from './../Api/api'
 
@@ -23,5 +23,5 @@ const mapStateToProps = (state) => ({
   login: state.auth.login,
 });
 
-export default connect(mapStateToProps, { getAuthUserData })(HeaderContainer);
+export default connect(mapStateToProps, { getAuthUserData, logout })(HeaderContainer);
 
