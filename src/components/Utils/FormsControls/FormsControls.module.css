@@ -7,3 +7,8 @@
     color: red;
     margin-left: 10px;
 }
+
+.formsummaryerror {
+    color: red;
+    margin: 10px 0 0 10px;
+}
