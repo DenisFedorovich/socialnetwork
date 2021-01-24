@@ -6,15 +6,10 @@ import {
     setCurrentPage,
     toogleFollowingProgress, getUsers
 } from '../../redux/users-reducer';
-import * as axios from 'axios';
 import Users from './Users';
 import Preloader from './../Preloader/Preloader';
-import { userAPI } from './../Api/api';
 import { compose } from 'redux';
-import { Redirect } from 'react-router-dom';
 import { withAuthRedirect } from './../../components/HOC/withAuhRedirect'
-
-
 
 class UsersContainer extends React.Component {
 
@@ -54,13 +49,12 @@ let mapStateToProps = (state) => {
 
 //в объекте делаем ссылки на экшнкреэйтеры(мэпстейтетупропс)
 
-export default compose(withAuthRedirect,
+export default compose(
     connect(mapStateToProps, {
-        follow, unfollow, setCurrentPage, 
+        follow, unfollow, setCurrentPage,
         toogleFollowingProgress, getUsers,
     })
 )(UsersContainer);
-
 
 /*let mapDispatchToProps = (dispatch) => {
     return {
