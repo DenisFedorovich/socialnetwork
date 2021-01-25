@@ -59,7 +59,7 @@
 
 .country {
   padding-left: 5px;
-} 
+}
 
 .selectedPage {
   font-weight: bold;
@@ -68,7 +68,6 @@
 
 .selectedPage:hover {
   cursor: pointer;
-  
 }
 
 .numberPage {

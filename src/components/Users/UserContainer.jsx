@@ -4,12 +4,14 @@ import {
     follow,
     unfollow,
     setCurrentPage,
-    toogleFollowingProgress, getUsers
+    toogleFollowingProgress, requestUsers
 } from '../../redux/users-reducer';
 import Users from './Users';
 import Preloader from './../Preloader/Preloader';
 import { compose } from 'redux';
-import { withAuthRedirect } from './../../components/HOC/withAuhRedirect'
+import { getUsers, getPageSize, getTotalUsersCount,
+    getCurrentPage, getIsFetching, getFollowingInProgress,
+} from '../../redux/users-selectors';
 
 class UsersContainer extends React.Component {
 
@@ -38,22 +40,21 @@ class UsersContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize, // для пагинации
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
-        followingInProgress: state.usersPage.followingInProgress,
+        users: getUsers(state),
+        pageSize: getPageSize(state), // для пагинации
+        totalUsersCount: getTotalUsersCount(state),
+        currentPage :getCurrentPage(state),
+        isFetching: getIsFetching(state),
+        followingInProgress: getFollowingInProgress(state),
     }
 }
 
 //в объекте делаем ссылки на экшнкреэйтеры(мэпстейтетупропс)
 
 export default compose(
-    connect(mapStateToProps, {
-        follow, unfollow, setCurrentPage,
-        toogleFollowingProgress, getUsers,
-    })
+    connect(mapStateToProps,{follow, unfollow, setCurrentPage,
+        toogleFollowingProgress,
+        getUsers: requestUsers })
 )(UsersContainer);
 
 /*let mapDispatchToProps = (dispatch) => {
