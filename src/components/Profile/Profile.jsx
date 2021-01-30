@@ -1,8 +1,7 @@
 import React from 'react';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 import MyPostsContainer from './MyPost/MyPostsContainer';
-import classes from './Profile.module.css';
-import { updateStatus } from '../../redux/profile-reducer';
+
 
 
 
