@@ -2,3 +2,7 @@
   grid-area: m;
   background-color: #f8f6f6;
 }
+
+.block {
+  padding: 10px 15px;
+}

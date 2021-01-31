@@ -30,7 +30,6 @@ export const getFollowingInProgress = (state) => {
 }
 
 export const countSomethingDifficult = (state) => {
-    debugger
     //for... math... big arrays
     let count = 23;
     return count;

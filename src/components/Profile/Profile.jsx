@@ -1,9 +1,7 @@
 import React from 'react';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 import MyPostsContainer from './MyPost/MyPostsContainer';
-
-
-
+import classes from './Profile.module.css';
 
 const Profile = (props) => {
 
@@ -11,9 +9,11 @@ const Profile = (props) => {
     <div>
       <ProfileInfo profile={props.profile} status={props.status}
         updateStatus={props.updateStatus} />
-      <MyPostsContainer />
+      <div className={classes.block}>
+        <MyPostsContainer />
+      </div>
     </div>
-  ); // атрибут совпадет название с массивом на который ссылаемся
+  );
 }
 
 export default Profile;

@@ -1,7 +1,3 @@
-.block {
-  margin-left: 10px;
-}
-
 .postform {
   display: flex;
   align-items: center;
@@ -20,6 +16,7 @@
   overflow: hidden;
   transition: ease 0.3s;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .btn:hover {
@@ -27,3 +24,9 @@
   cursor: pointer;
 }
 
+.textarea {
+  margin-top: 10px;
+  resize : none;
+  width  : 250px;
+  height : 80px;
+}

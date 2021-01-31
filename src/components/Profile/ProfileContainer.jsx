@@ -5,7 +5,6 @@ import { getUserProfile, getStatus, updateStatus } from "../../redux/profile-red
 import { withRouter } from "react-router-dom";
 import { compose } from 'redux';
 
-
 class ProfileContainer extends React.Component {
   componentDidMount() {
     let userId = this.props.match.params.userId;
@@ -18,7 +17,6 @@ class ProfileContainer extends React.Component {
 
     this.props.getUserProfile(userId);
     this.props.getStatus(userId)
-
   }
 
   render() {
@@ -43,12 +41,3 @@ export default compose(
   withRouter,
   //withAuthRedirect
 )(ProfileContainer);
-
-
-/*
-let WithUrlDataContainerComponent = withRouter(authRedirectComponent);
-
-let authRedirectComponent = withAuthRedirect(ProfileContainer);//HOC
-
-export default connect(mapStateToProps, { getUserProfile })(WithUrlDataContainerComponent);// в коннект данные из урла закинули
-*/

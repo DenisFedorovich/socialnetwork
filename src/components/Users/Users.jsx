@@ -2,8 +2,6 @@ import React from 'react';
 import userPhoto from './../../assets/img/rick.jpg';
 import s from './Users.module.css';
 import { NavLink } from 'react-router-dom';
-import * as axios from 'axios';
-import { usersAPI } from './../Api/api';
 
 let Users = (props) => {
 
@@ -52,7 +50,7 @@ let Users = (props) => {
                     </div>
                     <div className={s.location}>
                         <div>
-                            <div> {"u.location.city"},      </div>
+                            <div> {"u.location.city"}</div>
                         </div>
                         <div className={s.country}>
                             <div> {"u.location.country"} </div>

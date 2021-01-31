@@ -1,11 +1,12 @@
 import React from 'react';
 import classes from'./Post.module.css';
+import userPhoto from '../../../../assets/img/fallout.jpg'
 
 const Post = (props) => {
-  
+
   return (
     <div className={classes.post}>
-      <img className={classes.miniavatar} src='../../img/avatar2700.jpg' alt='avatar'></img>
+      <img className={classes.miniavatar} src={userPhoto} alt='avatar'></img>
         <p>{props.message}</p>
       <div>
         <span>like: </span> {props.like}

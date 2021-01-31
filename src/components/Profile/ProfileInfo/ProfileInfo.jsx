@@ -2,22 +2,20 @@ import React from 'react';
 import Preloader from '../../Preloader/Preloader';
 import classes from './ProfileInfo.module.css';
 import ProfileStatusWithHooks from './ProfieStatus/ProfileStatusWithHooks';
-
+import userAvatar from './../../../assets/img/avatar.jpg';
 
 const ProfileInfo = (props) => {
+
   if (!props.profile) {
     return <Preloader />
   }
 
   return (
     <div className={classes.block}>
-      <div>
-        <img src='./../../../../public/img/avatar2700.jpg'/>
+      <div  className={classes.avatar}>
+         <img className={classes.avatarImg}src={props.profile.photos.large} />
       </div>
-      <div>
-        <img className={classes.peopleAva} src={props.profile.photos.large} />
-      </div>
-      <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
+      <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} />
       <div>
         <div className={classes.profileName}> {props.profile.fullName} </div>
       </div>
@@ -32,3 +30,11 @@ const ProfileInfo = (props) => {
 }
 
 export default ProfileInfo;
+
+
+/*<div className={classes.avatar}>
+        <img src={userPhoto} className={classes.avatarImg} />
+      </div>
+      <div  className={classes.avatar}>
+        <img className={classes.avatarImg} src={props.profile.photos.large} />
+      </div>*/
