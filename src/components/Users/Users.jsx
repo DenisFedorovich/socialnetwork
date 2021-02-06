@@ -2,6 +2,7 @@ import React from 'react';
 import userPhoto from './../../assets/img/rick.jpg';
 import s from './Users.module.css';
 import { NavLink } from 'react-router-dom';
+import Paginator from "../Utils/Paginator/Paginator";
 
 let Users = (props) => {
 
@@ -12,13 +13,14 @@ let Users = (props) => {
     }
     //navlink здесь себя ведет как тег <a>
     return <div >
-        <div className={s.numberPage}>
+       <div className={s.numberPage}>
             {pages.map(p => {
                 return <span className={props.currentPage === p && s.selectedPage} onClick={(e) => {
                     props.onPageChanged(p)// e - event(обработчик события)
                 }}> {p} </span>
             })}
         </div>
+
 
         {props.users.map(u => <div key={u.id}>
             <div className={s.userBlock}>
