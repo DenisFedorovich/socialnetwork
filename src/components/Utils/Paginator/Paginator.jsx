@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from "./Paginator.module.css";
+import s from "../../Users/Users.module.css";
 
-let Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged}) => {
+const Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged}) => {
     let pagesCount = Math.ceil(totalUsersCount / pageSize);
 
     let pages = [];
@@ -9,13 +10,12 @@ let Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged}) => {
         pages.push(i);
     }
 
-    return <div>
-            {pages.map(p => {
-                return <span className={currentPage === p && styles.selectedPage}
-                             onClick={(e) => {
-                                 onPageChanged(p);
-                             }}>{p}</span>
-            })}
+    return <div >
+        {pages.map(p => {
+            return <span className={currentPage === p && s.selectedPage} onClick={(e) => {
+                onPageChanged(p)// e - event(обработчик события)
+            }}> {p} </span>
+        })}
         </div>
 }
 

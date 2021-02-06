@@ -1,3 +1,18 @@
+
+
 .selectedPage {
     font-weight: bold;
+    font-size: 22px;
+}
+
+.selectedPage:hover {
+    cursor: pointer;
+}
+
+.numberPage {
+    cursor: pointer;
+}
+
+.block{
+    width: 600px;
 }
